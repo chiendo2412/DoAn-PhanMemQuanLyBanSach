@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NhapKho" targetNamespace="http://tempuri.org/NhapKho.xsd" xmlns:mstns="http://tempuri.org/NhapKho.xsd" xmlns="http://tempuri.org/NhapKho.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PhanMemBanSachConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PhanMemBanSachConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DoAn_BanSach.Properties.Settings.GlobalReference.Default.PhanMemBanSachConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dt_NhapkhoTableAdapter" GeneratorDataComponentClassName="dt_NhapkhoTableAdapter" Name="dt_Nhapkho" UserDataComponentName="dt_NhapkhoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PhanMemBanSachConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Sach.MaSach, Sach.TenSach, ChiTietPhieuNhap.SoLuong, HoaDonNhapSach.NgayNhap
+FROM            Sach INNER JOIN
+                         ChiTietPhieuNhap ON Sach.MaSach = ChiTietPhieuNhap.MaSach INNER JOIN
+                         HoaDonNhapSach ON ChiTietPhieuNhap.MaPN = HoaDonNhapSach.MaPN</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaSach" DataSetColumn="MaSach" />
+              <Mapping SourceColumn="TenSach" DataSetColumn="TenSach" />
+              <Mapping SourceColumn="SoLuong" DataSetColumn="SoLuong" />
+              <Mapping SourceColumn="NgayNhap" DataSetColumn="NgayNhap" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NhapKho" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="NhapKho" msprop:Generator_UserDSName="NhapKho">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Nhapkho" msprop:Generator_TableClassName="dt_NhapkhoDataTable" msprop:Generator_TableVarName="tabledt_Nhapkho" msprop:Generator_TablePropName="dt_Nhapkho" msprop:Generator_RowDeletingName="dt_NhapkhoRowDeleting" msprop:Generator_RowChangingName="dt_NhapkhoRowChanging" msprop:Generator_RowEvHandlerName="dt_NhapkhoRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_NhapkhoRowDeleted" msprop:Generator_UserTableName="dt_Nhapkho" msprop:Generator_RowChangedName="dt_NhapkhoRowChanged" msprop:Generator_RowEvArgName="dt_NhapkhoRowChangeEvent" msprop:Generator_RowClassName="dt_NhapkhoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaSach" msprop:Generator_ColumnVarNameInTable="columnMaSach" msprop:Generator_ColumnPropNameInRow="MaSach" msprop:Generator_ColumnPropNameInTable="MaSachColumn" msprop:Generator_UserColumnName="MaSach">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenSach" msprop:Generator_ColumnVarNameInTable="columnTenSach" msprop:Generator_ColumnPropNameInRow="TenSach" msprop:Generator_ColumnPropNameInTable="TenSachColumn" msprop:Generator_UserColumnName="TenSach">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SoLuong" msprop:Generator_ColumnVarNameInTable="columnSoLuong" msprop:Generator_ColumnPropNameInRow="SoLuong" msprop:Generator_ColumnPropNameInTable="SoLuongColumn" msprop:Generator_UserColumnName="SoLuong" type="xs:int" minOccurs="0" />
+              <xs:element name="NgayNhap" msprop:Generator_ColumnVarNameInTable="columnNgayNhap" msprop:Generator_ColumnPropNameInRow="NgayNhap" msprop:Generator_ColumnPropNameInTable="NgayNhapColumn" msprop:Generator_UserColumnName="NgayNhap" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dt_Nhapkho" />
+      <xs:field xpath="mstns:MaSach" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
