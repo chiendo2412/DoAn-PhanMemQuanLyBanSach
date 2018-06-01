@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXuatThongKeTonKho));
             this.crptThongKeTonKho = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
@@ -61,8 +62,9 @@
             this.ClientSize = new System.Drawing.Size(898, 366);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.crptThongKeTonKho);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmXuatThongKeTonKho";
-            this.Text = "frmXuatThongKeTonKho";
+            this.Text = "Xuất Thống Kê Tồn Kho";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmXuatThongKeTonKho_Load);
             this.ResumeLayout(false);

@@ -71,7 +71,7 @@ namespace DoAn_BanSach.View
 
         private void frmUser_Load(object sender, EventArgs e)
         {
-
+            timer1.Start();
         }
 
         private void lậpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,16 +119,6 @@ namespace DoAn_BanSach.View
             ThemTabPages(View.frmDoiMatKhau.frmDMK, 4, "Đổi Mật Khẩu");
         }
 
-        private void đổiMậtKhẩuToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            ThemTabPages(View.frmDoiMatKhau.frmDMK, 4, "Đổi Mật Khẩu");
-        }
-
-        private void đổiMậtKhẩuToolStripMenuItem_Click_2(object sender, EventArgs e)
-        {
-            ThemTabPages(View.frmDoiMatKhau.frmDMK, 4, "Đổi Mật Khẩu");
-        }
-
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ThemTabPages(View.frmTimkiemkhachhang.frmTKKH, 4, "Tìm kiếm Khách Hàng");
@@ -160,11 +150,32 @@ namespace DoAn_BanSach.View
             frm.ShowDialog();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void lậpPhiếuNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThemTabPages(View.frmHDNhapSach.frmHDNS, 4, "Nhập Sách");
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ThemTabPages(View.frmDoiMatKhau.frmDMK, 4, "Đổi Mật Khẩu");
+        }
+
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDangNhappp frm = new frmDangNhappp();
-            this.Hide();
-            frm.ShowDialog();
+            DialogResult dr = MessageBox.Show("Bạn có muốn thoát", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                return;
+            }
 
         }
     }

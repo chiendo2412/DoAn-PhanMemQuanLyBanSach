@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXuatPhieuNhap));
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.crpvXuatPhieuNhap = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             this.ClientSize = new System.Drawing.Size(934, 376);
             this.Controls.Add(this.crpvXuatPhieuNhap);
             this.Controls.Add(this.crystalReportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmXuatPhieuNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Xuất Phiếu Nhập";

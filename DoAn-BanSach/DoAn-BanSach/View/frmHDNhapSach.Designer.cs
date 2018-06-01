@@ -58,13 +58,14 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dtGRchitietphieunhap);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(396, 139);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(601, 380);
+            this.groupBox2.Size = new System.Drawing.Size(601, 402);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết phiếu nhập";
@@ -80,16 +81,18 @@
             this.dtGRchitietphieunhap.Location = new System.Drawing.Point(3, 22);
             this.dtGRchitietphieunhap.Name = "dtGRchitietphieunhap";
             this.dtGRchitietphieunhap.ReadOnly = true;
-            this.dtGRchitietphieunhap.Size = new System.Drawing.Size(595, 355);
+            this.dtGRchitietphieunhap.Size = new System.Drawing.Size(595, 377);
             this.dtGRchitietphieunhap.TabIndex = 5;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.dtGRdanhsachPN);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(4, 139);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 380);
+            this.groupBox1.Size = new System.Drawing.Size(378, 399);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu nhập";
@@ -105,7 +108,7 @@
             this.dtGRdanhsachPN.Location = new System.Drawing.Point(3, 22);
             this.dtGRdanhsachPN.Name = "dtGRdanhsachPN";
             this.dtGRdanhsachPN.ReadOnly = true;
-            this.dtGRdanhsachPN.Size = new System.Drawing.Size(372, 355);
+            this.dtGRdanhsachPN.Size = new System.Drawing.Size(372, 374);
             this.dtGRdanhsachPN.TabIndex = 4;
             // 
             // btnXoaHD

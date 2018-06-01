@@ -16,7 +16,8 @@ namespace DoAn_BanSach.View
 {
     public partial class frmChitietHoaDon : Form
     {
-        string manv = "", phanquyen = "";
+        string manv = frmDangNhappp.mnvlogin;
+        string phanquyen = "";
         int i;
         long Tien;
         HoaDonCtr hdCtr = new HoaDonCtr();
@@ -78,7 +79,7 @@ namespace DoAn_BanSach.View
         {
             hd.Mahd = txtMaHD.Text.Trim();
             hd.Makhachhang = txtMaKH.SelectedValue.ToString();
-            hd.Manhanvien = txtMaNV.SelectedValue.ToString();
+            hd.Manhanvien = txtMaNV.Text.Trim();
         }
 
         private void btnLapHoaDonMoi_Click(object sender, EventArgs e)
@@ -92,7 +93,7 @@ namespace DoAn_BanSach.View
             txtMaHD.Enabled = false;
             txtMaHD.Text = HoaDonCtr.GetIDHoaDon();
             txtMaKH.Enabled = true;
-            txtMaNV.Enabled = true;
+            txtMaNV.Text = manv;
             loadCombox();
         }
 
@@ -198,11 +199,6 @@ namespace DoAn_BanSach.View
             txtMaKH.DataSource = khCtr.GetData();
             txtMaKH.ValueMember = "MaKH";
             txtMaKH.DisplayMember = "TenKH";
-            NhanVienCtr nvCtr = new NhanVienCtr();
-            txtMaNV.DataSource = nvCtr.GetData();
-            txtMaNV.ValueMember = "MaNV";
-            txtMaNV.DisplayMember = "TenNV";
-
         }
 
         private void cbbMaSach_SelectedIndexChanged(object sender, EventArgs e)

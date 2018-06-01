@@ -15,6 +15,8 @@ namespace DoAn_BanSach.View
 {
     public partial class frmChitietPhieuNhap : Form
     {
+        string manv = frmDangNhappp.mnvlogin;
+        string phanquyen = "";
         int i;
         long Tien;
         PhieuNhapCtr pnCtr = new PhieuNhapCtr();
@@ -49,6 +51,13 @@ namespace DoAn_BanSach.View
             dtGRchitietHD.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             
+        }
+        public frmChitietPhieuNhap(string Hoten, string USN, string PQ)
+        {
+            InitializeComponent();
+            txtMaNV.Text = USN;
+            manv = USN;
+            phanquyen = PQ;
         }
 
         public SqlConnection getConnect()
@@ -87,7 +96,7 @@ namespace DoAn_BanSach.View
             txtMaPN.Text = PhieuNhapCtr.GetIDPhieuNhap();
             txtMaNV.Focus();
             cbbNhaCC.Enabled = true;
-            txtMaNV.Enabled = true;
+            txtMaNV.Text = manv;
             btnGhiPhieu.Enabled = true;
             btnLapPhieuMoi.Enabled = false;
             loadCombox();
@@ -99,18 +108,12 @@ namespace DoAn_BanSach.View
             cbbNhaCC.ValueMember = "MaNCC";
             cbbNhaCC.DisplayMember = "TenNCC";
 
-            NhanVienCtr nvCtr = new NhanVienCtr();
-            txtMaNV.DataSource = nvCtr.GetData();
-            txtMaNV.ValueMember = "MaNV";
-            txtMaNV.DisplayMember = "TenNV";
-
-
         }
 
         private void addData(PhieuNhapObj pn)
         {
             pn.Ma = txtMaPN.Text.Trim();
-            pn.Manhanvien = txtMaNV.SelectedValue.ToString();
+            pn.Manhanvien = txtMaNV.Text.Trim();
             pn.Manhacungcap = cbbNhaCC.SelectedValue.ToString();
         }
         private void btnGhiPhieu_Click(object sender, EventArgs e)
@@ -124,7 +127,6 @@ namespace DoAn_BanSach.View
             addData(pnObj);
             if (pnCtr.AddData(pnObj))
             {
-                MessageBox.Show("Ghi thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnGhiPhieu.Enabled = false;
                 btnLapPhieuMoi.Enabled = true;
             }
@@ -295,5 +297,11 @@ namespace DoAn_BanSach.View
         {
 
         }
+
+        private void dtGRchitietHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
     }
 }

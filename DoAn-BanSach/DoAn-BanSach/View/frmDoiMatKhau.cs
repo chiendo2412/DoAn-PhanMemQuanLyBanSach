@@ -13,7 +13,7 @@ namespace DoAn_BanSach.View
 {
     public partial class frmDoiMatKhau : UserControl
     {
-        string manv;
+        string manv = frmDangNhappp.mnvlogin;
         public frmDoiMatKhau()
         {
             InitializeComponent();
@@ -27,7 +27,23 @@ namespace DoAn_BanSach.View
         private void btnDoi_Click(object sender, EventArgs e)
         {
             string matkhaucu = "", matkhaumoi = "";
-            foreach(DataRow row in NhanVienCtr.DangNhap(manv).Rows)
+            string strMKC = txtMKCu.Text.Trim();
+            string strMKM = txtMKmoi.Text.Trim();
+            string strNLMKM = txtNhaplaiMKMoi.Text.Trim();
+            string strErr = string.Empty;
+            if (strMKC == string.Empty)
+                strErr = "Chưa nhập mật khẩu cũ";
+            if (strMKM == string.Empty)
+                strErr += "\n Chưa nhập mật khẩu mới";
+            if (strNLMKM != strMKM)
+                strErr += "\n Nhập lại mật khẩu mới không đúng";
+            if (strErr != string.Empty)
+            {
+                MessageBox.Show(" " + strErr, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+            foreach (DataRow row in NhanVienCtr.DangNhap(manv).Rows)
             {
                 matkhaucu = row["MatKhau"].ToString();
             }
@@ -37,6 +53,9 @@ namespace DoAn_BanSach.View
                 if (NhanVienCtr.ChangePassword(manv, matkhaumoi))
                 {
                     MessageBox.Show("Thay đổi thành công.", "Imformation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtMKCu.ResetText();
+                    txtMKmoi.ResetText();
+                    txtNhaplaiMKMoi.ResetText();
                 }
                 else
                 {

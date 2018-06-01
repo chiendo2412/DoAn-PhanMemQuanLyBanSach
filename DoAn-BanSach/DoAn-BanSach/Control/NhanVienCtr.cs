@@ -21,6 +21,7 @@ namespace DoAn_BanSach.Control
         {
             return NhanVienMod.DangNhap(MaNV);
         }
+
         public static bool ChangePassword(string MaNV, string MatKhau)
         {
             return NhanVienMod.ChangePassword(MaNV, MatKhau);

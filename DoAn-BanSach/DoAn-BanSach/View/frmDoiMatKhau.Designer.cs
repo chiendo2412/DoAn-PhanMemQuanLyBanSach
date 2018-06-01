@@ -36,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDoi = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNhaplaiMKMoi = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtMKmoi
@@ -98,7 +100,7 @@
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(501, 251);
+            this.btnCancel.Location = new System.Drawing.Point(501, 288);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(90, 31);
             this.btnCancel.TabIndex = 19;
@@ -112,7 +114,7 @@
             this.btnDoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoi.Image = ((System.Drawing.Image)(resources.GetObject("btnDoi.Image")));
-            this.btnDoi.Location = new System.Drawing.Point(356, 251);
+            this.btnDoi.Location = new System.Drawing.Point(356, 288);
             this.btnDoi.Name = "btnDoi";
             this.btnDoi.Size = new System.Drawing.Size(127, 31);
             this.btnDoi.TabIndex = 18;
@@ -122,13 +124,37 @@
             this.btnDoi.UseVisualStyleBackColor = true;
             this.btnDoi.Click += new System.EventHandler(this.btnDoi_Click);
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(171, 259);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 19);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Nhập lại mật khẩu mới:";
+            // 
+            // txtNhaplaiMKMoi
+            // 
+            this.txtNhaplaiMKMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNhaplaiMKMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhaplaiMKMoi.Location = new System.Drawing.Point(329, 256);
+            this.txtNhaplaiMKMoi.MaxLength = 6;
+            this.txtNhaplaiMKMoi.Name = "txtNhaplaiMKMoi";
+            this.txtNhaplaiMKMoi.PasswordChar = '●';
+            this.txtNhaplaiMKMoi.Size = new System.Drawing.Size(293, 26);
+            this.txtNhaplaiMKMoi.TabIndex = 17;
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDoi);
+            this.Controls.Add(this.txtNhaplaiMKMoi);
             this.Controls.Add(this.txtMKmoi);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtMKCu);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -149,5 +175,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNhaplaiMKMoi;
     }
 }

@@ -59,7 +59,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.txtMaNV = new System.Windows.Forms.ComboBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -419,10 +419,10 @@
             // 
             // txtMaNV
             // 
-            this.txtMaNV.FormattingEnabled = true;
-            this.txtMaNV.Location = new System.Drawing.Point(501, 23);
+            this.txtMaNV.Enabled = false;
+            this.txtMaNV.Location = new System.Drawing.Point(501, 28);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(249, 27);
+            this.txtMaNV.Size = new System.Drawing.Size(249, 26);
             this.txtMaNV.TabIndex = 25;
             // 
             // frmChitietHoaDon
@@ -439,8 +439,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmChitietHoaDon";
-            this.Text = "Hóa Đơn";
+            this.Text = "Chi Tiết Hóa Đơn";
             this.Load += new System.EventHandler(this.frmChitietHoaDon_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -485,6 +486,6 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.ComboBox txtMaKH;
-        private System.Windows.Forms.ComboBox txtMaNV;
+        private System.Windows.Forms.TextBox txtMaNV;
     }
 }

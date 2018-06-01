@@ -15,6 +15,9 @@ namespace DoAn_BanSach.View
 {
     public partial class frmDangNhappp : Form
     {
+        public static String mnvlogin;
+            
+            
         int dem = 0;
         public frmDangNhappp()
         {
@@ -72,6 +75,7 @@ namespace DoAn_BanSach.View
                     {
                         MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Save_Data();
+                        mnvlogin= txtMaNV.Text;
                         if (phanquyen == "Admin")
                         {
                             this.Hide();
@@ -101,8 +105,6 @@ namespace DoAn_BanSach.View
                         }
                         dem++;
                         MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        txtMaNV.ResetText();
-                        txtMatkhau.ResetText();
                         break;
                     }
                 }

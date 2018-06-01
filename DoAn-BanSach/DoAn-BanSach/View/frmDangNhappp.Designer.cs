@@ -164,11 +164,12 @@
             this.Controls.Add(this.txtMaNV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(728, 416);
             this.MinimumSize = new System.Drawing.Size(728, 416);
             this.Name = "frmDangNhappp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDangNhappp";
+            this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.frmDangNhappp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -138,12 +138,9 @@ namespace DoAn_BanSach
 
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
+            timer1.Start();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblTime.Text = DateTime.Now.ToLongTimeString();
-        }
 
         private void quảnLýNhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -214,6 +211,11 @@ namespace DoAn_BanSach
         {
             frmGioiThieu frm = new frmGioiThieu();
             frm.ShowDialog();
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            label3.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void báoCáoNhậpKhoToolStripMenuItem_Click(object sender, EventArgs e)

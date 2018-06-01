@@ -34,14 +34,15 @@ namespace DoAn_BanSach.Model
             con.Close();
             return dt;
         }
+
         public static bool ChangePassword(string MaNV, string MatKhau)
         {
             
                 SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-D617688;Initial Catalog=PhanMemBanSach;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand("sp_ChangePassword", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@manv", SqlDbType.NChar);
-                cmd.Parameters.Add("@matkhaumoi", SqlDbType.NChar);
+                cmd.Parameters.Add("@manv", SqlDbType.Char);
+                cmd.Parameters.Add("@matkhaumoi", SqlDbType.VarChar);
                 cmd.Parameters["@manv"].Value = MaNV;
                 cmd.Parameters["@matkhaumoi"].Value = MatKhau;
                 try

@@ -62,7 +62,7 @@
             this.txtTongtien = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtGRchitietHD = new System.Windows.Forms.DataGridView();
-            this.txtMaNV = new System.Windows.Forms.ComboBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -407,6 +407,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox3.Controls.Add(this.dtGRchitietHD);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 391);
@@ -432,14 +434,15 @@
             this.dtGRchitietHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtGRchitietHD.Size = new System.Drawing.Size(775, 183);
             this.dtGRchitietHD.TabIndex = 9;
+            this.dtGRchitietHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGRchitietHD_CellClick);
             this.dtGRchitietHD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtGRchitietHD_KeyDown);
             // 
             // txtMaNV
             // 
-            this.txtMaNV.FormattingEnabled = true;
-            this.txtMaNV.Location = new System.Drawing.Point(125, 64);
+            this.txtMaNV.Enabled = false;
+            this.txtMaNV.Location = new System.Drawing.Point(125, 62);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(229, 27);
+            this.txtMaNV.Size = new System.Drawing.Size(229, 26);
             this.txtMaNV.TabIndex = 16;
             // 
             // frmChitietPhieuNhap
@@ -455,8 +458,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmChitietPhieuNhap";
-            this.Text = "frmChitietPhieuNhap";
+            this.Text = "Chi Tiết Phiếu Nhập";
             this.Load += new System.EventHandler(this.frmChitietPhieuNhap_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -503,6 +507,6 @@
         private System.Windows.Forms.ComboBox cbbMaSach;
         private System.Windows.Forms.DataGridView dtGRchitietHD;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.ComboBox txtMaNV;
+        private System.Windows.Forms.TextBox txtMaNV;
     }
 }
